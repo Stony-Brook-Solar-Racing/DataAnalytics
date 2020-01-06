@@ -1,0 +1,11 @@
+doctype html
+html
+    head
+        title Testing
+    body
+        p
+            | This is a test paragraph
+        form(action="/submitForm", method="POST")
+            input(type="text", name="ISOString", placeholder="ISOString")
+            input(type="text", name="velocity", placeholder="Velocity")
+            input(type="submit")

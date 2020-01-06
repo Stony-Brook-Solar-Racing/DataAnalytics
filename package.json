@@ -1,0 +1,14 @@
+{
+  "name": "solar_racing",
+  "version": "1.0.0",
+  "description": "Stony Brook Solar Racing Data Analytics Website ",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongodb": "^3.4.1",
+    "pug": "^2.0.4"
+  }
+}
