@@ -74,6 +74,8 @@ abbr[title], dfn[title] {
     cursor:help;
 }
 
+
+
 table {
     border-collapse:collapse;
     border-spacing:0;
@@ -93,31 +95,62 @@ input, select {
     vertical-align:middle;
 }
 
-.title {
-  font-size: 80px;
-  color: white;
+h1 {
+  font-size: 250px;
+  color: black;
   text-align: center;
   text-decoration:underline;
 }
 
 #speed{
   background-color: yellow;
+  height: 300px;
+  width: 70px;
   position: relative;
   top: 100px;
+  border-radius: 100000000px;
+  box-shadow: 0px 0px 100px 20px teal;
+
 }
+
 
 #Battery-Life{
   background-color: red;
   position: relative;
   top: 100px;
+  height: 300px;
+  width: 70px;
+  border-radius: 100000000px;
+  box-shadow: 0px 0px 100px 20px teal;
+
 }
 
 #Water-Level{
-  background-color: green;
+  background-color: cyan;
   position: relative;
   top: 100px;
+  height: 300px;
+  width: 70px;
+  border-radius: 100000000px;
+  box-shadow: 0px 0px 100px 20px teal;
+
 }
 
-.body{
-  background-color: pink;
+body{
+  background-color: black;
+}
+
+#textforSpeed{
+  position: absolute;
+  left:140px;
+}
+
+#textforBattery{
+  position: absolute;
+  left:130px;
+}
+
+#textforWater{
+  position: absolute;
+  left:110px;
 }

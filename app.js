@@ -32,6 +32,8 @@ app.post("/submitForm", function(req, res) {
     console.log(client.db('solar').collection('solar').find());
 });
 
+
+
 app.get("/retrievedata", function(req, res) {
     var data = "";
     client.db('solar').collection('solar').find().toArray(function(err, result) {
@@ -40,6 +42,8 @@ app.get("/retrievedata", function(req, res) {
         res.send(result);
     });
 });
+
+
 
 var server = app.listen(5000, function(){});
 
