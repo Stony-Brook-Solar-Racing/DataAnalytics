@@ -29,10 +29,11 @@ app.post("/submitForm", function(req, res) {
         velocity : parseFloat(req.body.velocity)
     });
     res.render("index");
+    console.log(client.db('solar').collection('solar').find());
 });
 
-app.get("apipost", function(req, res) {
-
+app.get("/retrievedata", function(req, res) {
+    res.send(client.db('solar').collection('solar').find({}));
 });
 
 var server = app.listen(5000, function(){});
