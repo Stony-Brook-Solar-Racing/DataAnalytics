@@ -33,7 +33,12 @@ app.post("/submitForm", function(req, res) {
 });
 
 app.get("/retrievedata", function(req, res) {
-    res.send(client.db('solar').collection('solar').find({}));
+    var data = "";
+    client.db('solar').collection('solar').find().toArray(function(err, result) {
+        if (err) throw err;
+        console.log(result);
+        res.send(result);
+    });
 });
 
 var server = app.listen(5000, function(){});
