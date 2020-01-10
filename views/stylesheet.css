@@ -102,42 +102,34 @@ h1 {
   text-decoration:underline;
 }
 
-#speed{
-  background-color: yellow;
-  height: 300px;
-  width: 70px;
-  position: relative;
-  top: 100px;
-  border-radius: 100000000px;
-  box-shadow: 0px 0px 100px 20px teal;
-
+#title{
+  color: white;
 }
 
+#Speed{
+  background-color: yellow;
+}
 
 #Battery-Life{
   background-color: red;
-  position: relative;
-  top: 100px;
-  height: 300px;
-  width: 70px;
-  border-radius: 100000000px;
-  box-shadow: 0px 0px 100px 20px teal;
 
 }
 
 #Water-Level{
   background-color: cyan;
+}
+
+#Water-Level, #Battery-Life, #Speed{
   position: relative;
   top: 100px;
   height: 300px;
   width: 70px;
   border-radius: 100000000px;
-  box-shadow: 0px 0px 100px 20px teal;
-
+  box-shadow: 0px 0px 100px 20px white;
 }
 
 body{
-  background-color: black;
+  background-color: black !important;
 }
 
 #textforSpeed{
