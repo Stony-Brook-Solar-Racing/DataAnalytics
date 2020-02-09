@@ -10,7 +10,6 @@ const sqlite3 = require("sqlite3")
 let db = new sqlite3.Database("./db/solar.db");
 db.run("CREATE TABLE IF NOT EXISTS velocity(datetimeiso VARCHAR(64), velocity REAL)");
 
-
 app.set("view engine","pug");
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -29,7 +28,6 @@ app.get("/",function(req, res) {
 		}
 			res.render("index", {lastVelocity: recent});
 	});
-
 });
 
 app.post("/submitForm", function(req, res) {
@@ -77,15 +75,6 @@ app.get("/retrievedata", function(req, res) {
 				res.json(row);
 		}
 	});
-
-
-    /*
-	client.db('solar').collection('solar').find().toArray(function(err, result) {
-        if (err) throw err;
-        console.log(result);
-        res.send(result);
-    });
-    */
 });
 
 
