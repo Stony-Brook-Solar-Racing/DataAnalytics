@@ -74,8 +74,6 @@ abbr[title], dfn[title] {
     cursor:help;
 }
 
-
-
 table {
     border-collapse:collapse;
     border-spacing:0;
@@ -95,54 +93,64 @@ input, select {
     vertical-align:middle;
 }
 
-h1 {
-  font-size: 250px;
-  color: black;
+.title {
+  font-size: 80px;
+  color: white;
   text-align: center;
   text-decoration:underline;
 }
 
-#title{
-  color: white;
-}
-
-#Speed{
+#speed{
   background-color: yellow;
+  height: 300px;
+  width: 70px;
+  position: relative;
+  top: 100px;
+  border-radius: 100000000px;
+  box-shadow: 0px 0px 100px 20px white;
+
 }
 
 #Battery-Life{
   background-color: red;
-
-}
-
-#Water-Level{
-  background-color: cyan;
-}
-
-#Water-Level, #Battery-Life, #Speed{
   position: relative;
   top: 100px;
   height: 300px;
   width: 70px;
   border-radius: 100000000px;
   box-shadow: 0px 0px 100px 20px white;
+
 }
 
-body{
-  background-color: black !important;
+#Water-Level{
+  background-color: cyan;
+  position: relative;
+  top: 100px;
+  height: 300px;
+  width: 70px;
+  border-radius: 100000000px;
+  box-shadow: 0px 0px 100px 20px white;
+
 }
 
-#textforSpeed{
-  position: absolute;
-  left:140px;
+.body{
+  background-color: black;
 }
 
-#textforBattery{
-  position: absolute;
-  left:130px;
+#textforSpeed, #textforBattery, #textforWater{
+  position: relative;
+  text-align: center;
 }
 
-#textforWater{
-  position: absolute;
-  left:110px;
+
+#speedTextBox, #batteryTextBox, #waterTextBox{
+    font-size: 45px;
+    justify-content: center;
+
+}
+
+#speedtextbox, #batterytextbox, #watertextbox{
+  text-align: center;
+  top:50px;;
+  flex-wrap: wrap;
 }

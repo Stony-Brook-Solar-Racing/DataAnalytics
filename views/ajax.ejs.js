@@ -1,4 +1,4 @@
-console.log("Hello");
+$("#something").html("hello");
 window.setInterval(function(){
 	$.get("velocityUpdate", function(data, status){
 		console.log(data);

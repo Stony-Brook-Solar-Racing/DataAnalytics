@@ -1,7 +1,10 @@
 console.log("Hello");
+
 window.setInterval(function(){
+	console.log(data);
 	$.get("velocityUpdate", function(data, status){
-		console.log(data);
+		console.log("hello");
 		$("#something").html(data);
-	}), 2000
+		$("#something").html("hello");
+	}, timeout:1000), 2000
 });
