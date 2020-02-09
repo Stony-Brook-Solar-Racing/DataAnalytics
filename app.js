@@ -6,8 +6,8 @@ var uri = "mongodb+srv://admin:x2DN1adMTWiYC8Fu@solar-l3n4q.mongodb.net/solar?re
 var client = new MongoClient(uri, {useNewUrlParser : true, useUnifiedTopology : true});
 
 const sqlite3=require("sqlite3")
-let db=new sqlite3.Database("./db/dolar.db");
-db.run("CREATE TABLE IF NOT EXISTS velocity"(datetimeiso VARCHAR(64), velocity REAL)");
+let db=new sqlite3.Database("./db/solar.db");
+db.run("CREATE TABLE IF NOT EXISTS velocity (datetimeiso VARCHAR(64), velocity REAL)");
 /*client.connect(function(err
 ) {
     if (err) {
@@ -23,12 +23,13 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 var recent= -1;
 app.get("/",function(req, res) {
-    db.get("SELECT * FROM velocity ORDER BY datetimeiso DESC LIMIT 1", [], (err, row)=>){
+    db.get("SELECT * FROM velocity ORDER BY datetimeiso DESC LIMIT 1", [], (err, row)=>{
       if (err){
         console.log(err);
       }
       else {
         recent = row.velocity;
+        console.log(row);
         console.log("updating");
       }
     res.render("index", {lastVelocity: recent});
@@ -65,11 +66,11 @@ var a = db.get("SELECT * FROM velocity ORDER BY datetimeiso DESC LIMIT 1", [], (
 
 app.get("/retrievedata", function(req, res) {
     var data = "";
-/*    client.db('solar').collection('solar').find().toArray(function(err, result) {
+    client.db('solar').collection('solar').find().toArray(function(err, result) {
         if (err) throw err;
         console.log(result);
         res.send(result);
-    });*/
+    });
 });
 
 var server= app.listen(5000, function(){});
