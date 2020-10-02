@@ -1,20 +1,23 @@
+// Express app
 var express = require("express");
 var bodyParser = require("body-parser");
 var app = express();
-//var MongoClient = require("mongodb").MongoClient;
-//var uri = "mongodb+srv://admin:x2DN1adMTWiYC8Fu@solar-l3n4q.mongodb.net/solar?retryWrites=true&w=majority";
-//var uri = "mongodb://localhost:27017/solar"
-//var client = new MongoClient(uri, {useNewUrlParser : true, useUnifiedTopology : true});
 
+// Database setup
 const sqlite3 = require("sqlite3")
 let db = new sqlite3.Database("./db/solar.db");
 db.run("CREATE TABLE IF NOT EXISTS velocity(datetimeiso VARCHAR(64), velocity REAL)");
 
+// view engine is pug
 app.set("view engine","pug");
+
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 var recent = -1;
+
+// Screen - home page (show earliest data from the database)
 app.get("/",function(req, res) {
 	db.get("SELECT * FROM velocity ORDER BY datetimeiso DESC LIMIT 1",[],(err,row)=>{
 		if (err){
@@ -24,23 +27,16 @@ app.get("/",function(req, res) {
 			if (row){
 			recent = row.velocity;
 			}
-				console.log("updateing");
+				console.log("updating");
 		}
 			res.render("index", {lastVelocity: recent});
 	});
 });
 
+// Post data into database
 app.post("/submitForm", function(req, res) {
     console.log
 	console.log(req.body);
-    // console.log(req.body.ISOString);
-    // console.log(parseFloat(req.body.velocity));
-    /*
-    client.db('solar').collection("solar").insertOne({
-        ISOString : req.body.ISOString,
-        velocity : parseFloat(req.body.velocity)
-    });
-    */
     db.run("INSERT INTO velocity(datetimeiso,velocity) VALUES (?, ?)", [req.body.ISOString, parseFloat(req.body.velocity)], (err) => {
     	if (err){
 	 console.log(err);
