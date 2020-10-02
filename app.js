@@ -1,10 +1,10 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 var app = express();
-var MongoClient = require("mongodb").MongoClient;
+//var MongoClient = require("mongodb").MongoClient;
 //var uri = "mongodb+srv://admin:x2DN1adMTWiYC8Fu@solar-l3n4q.mongodb.net/solar?retryWrites=true&w=majority";
-var uri = "mongodb://localhost:27017/solar"
-var client = new MongoClient(uri, {useNewUrlParser : true, useUnifiedTopology : true});
+//var uri = "mongodb://localhost:27017/solar"
+//var client = new MongoClient(uri, {useNewUrlParser : true, useUnifiedTopology : true});
 
 const sqlite3 = require("sqlite3")
 let db = new sqlite3.Database("./db/solar.db");
