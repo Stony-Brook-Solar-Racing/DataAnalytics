@@ -2,6 +2,13 @@
 
 A demo/proof of concept for Stony Brook Solar Racing's telemetry system
 
+## Instructions
+- Download node.js
+- Run `npm install`
+- Run `node app.js`
+- Run `python readarduino.py` (Note: this needs to be running the same time as app.js)
+- Launch the app in your browser (http://127.0.0.1:5000/)
+
 
 # -- DEPRECATED -- 
 Data Analytics app for the Stony Brook Solar Racing Team
