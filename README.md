@@ -1,4 +1,9 @@
-# DataAnalytics
+# DataAnalytics Solar Racing Team Demo
+
+A demo/proof of concept for Stony Brook Solar Racing's telemetry system
+
+
+# -- DEPRECATED -- 
 Data Analytics app for the Stony Brook Solar Racing Team
 
 ## Learning Goals
