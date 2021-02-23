@@ -103,8 +103,8 @@ h1 {
 }
 
 #speed{
-  background-color: yellow;
-  height: 300px;
+  background-color: white;
+  height: 100px;
   width: 70px;
   position: relative;
   top: 100px;
@@ -115,10 +115,10 @@ h1 {
 
 
 #Battery-Life{
-  background-color: red;
+  background-color: white;
   position: relative;
   top: 100px;
-  height: 300px;
+  height: 100px;
   width: 70px;
   border-radius: 100000000px;
   box-shadow: 0px 0px 100px 20px teal;
@@ -126,10 +126,10 @@ h1 {
 }
 
 #Water-Level{
-  background-color: cyan;
+  background-color: white;
   position: relative;
   top: 100px;
-  height: 300px;
+  height: 100px;
   width: 70px;
   border-radius: 100000000px;
   box-shadow: 0px 0px 100px 20px teal;

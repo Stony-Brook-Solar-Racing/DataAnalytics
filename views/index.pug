@@ -7,21 +7,22 @@ head
     include stylesheet.css
   link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css' integrity='sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh' crossorigin='anonymous')
 body
-  h1 Solar Boat Data
+  h1 Stony Brook Solar Racing
   .container-fluid
   .container
     .row
       #speed.col-sm-4
         h2#textforSpeed  Speed #{lastVelocity}
         // <img src="speedometer.jpg" width="200" height="200">
-      #Battery-Life.col-sm-4
-        h2#textforBattery Battery
+      #Battery-Life.col-sm-4 
+        h2#textforBattery Battery #{lastBattery}
         // <img src="battery.jpeg" width="250" height="190">
       #Water-Level.col-sm-4
-        h2#textforWater  Water Level
+        h2#textforWater  Water Level #{lastWaterLevel}
         // <img src="water levl.png" width="200" height="200">
   script(src='https://code.jquery.com/jquery-3.4.1.min.js' integrity='sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=' crossorigin='anonymous')
   script(src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js' integrity='sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo' crossorigin='anonymous')
   script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js' integrity='sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6' crossorigin='anonymous')
   script
     include includes/test.js
+  
