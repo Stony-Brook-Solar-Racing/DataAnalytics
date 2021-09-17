@@ -4,7 +4,8 @@ import requests
 import random 
 
 url = "http://localhost:5000/submitForm"
-ser, ser2 = null
+ser = serial.Serial('/dev/ttyACM0',9600)
+ser2 = serial.Serial('/dev/ttyACM0',9700)
 
 def connect_to_serial():
     try:
