@@ -18,7 +18,7 @@ def connect_to_serial():
 def parse_data(line):
     print("> parsing line :"+line)
     try:
-        a= {"velocity": int(line), "ISOString": datetime.now().isoformat()}
+        a= {"velocity": float(line), "ISOString": datetime.now().isoformat()}
         print (a)
         return a
     except:
